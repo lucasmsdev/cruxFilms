@@ -1,0 +1,66 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+}
+
+.navbar:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 120px;
+    background: linear-gradient(to right, #B4392D, #6A24D9);
+}
+
+.navbar a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 15px 15px; /* Ajusta o padding dos itens da navbar */
+    margin-right: 20px; /* Adiciona espaçamento entre os itens da navbar, exceto o último */
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Altera a fonte das abas */
+    font-weight: bold; /* Aplica a fonte em negrito */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+}
+
+/* Ajusta o margin-right para o último item da navbar */
+.navbar a:last-child {
+    margin-right: 180px; /* Adiciona espaçamento maior entre o último item e o limite da tela */
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2;
+}
+
+.logo {
+    padding: 10px 20px; /* Ajusta o padding da logo */
+}
+
+.logo img {
+    max-width: 300px;
+    max-height: 100px;
+}
+
+.container {
+    margin-top: 50px; /* Remova a margem superior do container para que não afete todas as páginas */
+}
+
+/* Adiciona uma margem superior apenas ao primeiro item abaixo da navbar */
+.navbar + .container {
+    margin-top: 170px;
+}
